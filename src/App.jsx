@@ -1,8 +1,8 @@
-import { Loja3 } from "./Loja3"
+import { Loja4 } from "./Loja4"
 function App() {
   return (
     <>
-      <Loja3 />
+      <Loja4 />
     </>
   )
 }
