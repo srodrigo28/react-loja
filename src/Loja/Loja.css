@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.624);
+}
+
+.modal{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: #fff;
+    padding: 4rem;
+    border-radius: 8px;
+}
+#fechar{
+    position: absolute;
+    top: 110px;
+    right: 70px;
+
+    color: #fff;
+    background-color: transparent;
+    border: none;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .9s;
+}
+#fechar:hover{
+    color: red;
+    border: 1px solid red;
+    background-color: #000;
+    transform: rotate(180deg) scale(1.07); 
+}
+.main-container{
+    margin-top: 40px;
+    width: 100vw;
+    max-width: 1200px;
+    min-width: 850px;
+    height: 500px;
+    gap: 10px;
+    display: flex;
+}
+.product-image{
+    width: 50%;
+    height: 500px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.img-first{
+    width: 50%;
+}
+#addImage{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: green;
+    transition: .9s;
+}
+#addImage:hover{
+    transform: scale(1.1) rotate(360deg);
+}
+.img-group{
+    width: 100%;
+    height: 140px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+.img-group img{
+    width: 23%;
+}
+.product-form{
+    padding: 20px;
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #1d1d1d;
+
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.product-form input, select, input::placeholder, .div-input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: gray;
+    background-color: #000;
+    border-radius: 7px;
+}
+.btn-group{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-group button{
+    width: 200px;
+
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 7px;
+    transition: .9s;
+    opacity: .6;
+
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-group button:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+#entrada i{
+    color: green;
+    font-size: 1.5em;
+}
+#saida i{
+    font-size: 1.5em;
+    color: red;
+}
+#cadastrar{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: green;
+    border-radius: 7px;
+    transition: .9s;
+    opacity: .7;
+}
+#cadastrar:hover{
+    opacity: 1;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+}
+.div-input-check{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.check-input{
+    margin-left: -80px;
+    height: 20px;
+    width: 40px !important;
+}
+.div-input-check p{
+    margin-left: -5px;
+}
+@media screen and (max-width: 850px) {
+    .main-container{
+        margin-top: 100px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    #fechar{
+        position: absolute;
+        top: 200px;
+        left: 250px;
+    
+        color: #fff;
+        background-color: red;
+        border: none;
+    
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .9s;
+    }
+    .product-image{
+        margin-top: 230px;
+        width: 90vw;
+    }
+    .product-form{
+        width: 90vw;
+    }
+    .check-input{
+        margin-left: -30px;
+        height: 20px;
+        width: 40px !important;
+    }
+    .div-input-check p{
+        padding-left: 5px;
+        padding-top: 20px;
+    }
+}
+.input99{
+    display: none;
+}
