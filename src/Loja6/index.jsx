@@ -38,19 +38,20 @@ export function Loja6() {
     e.preventDefault();
 
     const imagemUrls = [];
+    
     for (let imagem of imagens) {
-      const { data, error } = await supabase
-        .storage
-        .from('backet1')
-        .upload(`products/${imagem.name}`, imagem);
-      
-      if (error) {
-        console.error('Erro ao fazer upload da imagem:', error);
-        return;
-      }
+        const { data, error } = await supabase
+          .storage
+          .from('backet1')
+          .upload(`products/${imagem.name}`, imagem);
+        
+        if (error) {
+          console.error('Erro ao fazer upload da imagem:', error);
+          return;
+        }
 
-      const imagemUrl = `${supabaseUrl}/storage/v1/object/public/backet1/${data.path}`;
-      imagemUrls.push(imagemUrl);
+        const imagemUrl = `${supabaseUrl}/storage/v1/object/public/backet1/${data.path}`;
+        imagemUrls.push(imagemUrl);
     }
 
     const { error: insertError } = await supabase
@@ -75,45 +76,44 @@ export function Loja6() {
       <h1>Cadastro de Produto</h1>
 
       <form onSubmit={handleCadastro}>
-        <label> Nome:
-          <input type="text" value={nome}
-            onChange={(e) => setNome(e.target.value)} required
-          />
+        
+        <label> Nome: <input type="text" value={nome}
+            onChange={(e) => setNome(e.target.value)} required />
         </label>
         <br />
-
-        <label>
-          Preço:
-          <input type="number" step="0.01" value={preco}
-            onChange={(e) => setPreco(e.target.value)} required
-          />
+        
+        <label> Preço: <input type="number" step="0.01" value={preco}
+            onChange={(e) => setPreco(e.target.value)} required />
         </label>
         <br />
-
+        
         <label> Imagens:
           <input type="file" multiple accept='image/*'
-            onChange={(e) => setImagens(Array.from(e.target.files))}
-          />
+            onChange={(e) => setImagens(Array.from(e.target.files))} />
         </label>
         <br />
+
         <button type="submit">Cadastrar</button>
+      
       </form>
 
       <h2>Listagem de Produtos</h2>
 
       <div className="produtos-lista">
+          
           {produtos.map((produto) => (
             <div key={produto.id} className="produto">
               <h3>{produto.nome}</h3>
-              <p>Preço: R$ {produto.preco.toFixed(2)} </p>
+              <p>Preço: R$ {produto.preco} </p>
               <div className="imagens-container">
-                  { produto.imagens && produto.imagens.map( (url, index) => (
-                    <img key={index} src={url} alt={`Imagem de ${produto.nome}`} width="100" />
+                  { produto.imagens && produto.imagens.map( ( url, index ) => (
+                      <img key={index} src={url} alt={`Imagem de ${produto.nome}`} width="100" />
                     ))
                   }
               </div>
             </div>
           ))}
+
       </div>
     </div>
   );
