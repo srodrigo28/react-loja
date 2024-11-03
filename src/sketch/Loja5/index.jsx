@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import "./Loja5.css"
 import { toast } from 'react-toastify';
+import { useRef, useState } from 'react';
+import { createClient } from '@supabase/supabase-js';
 
 // Configuração do Supabase
 // Substitua pelo seu URL do projeto
@@ -9,7 +10,6 @@ const supabaseUrl = 'https://tqvkkwmqtyyzajeqnkwv.supabase.co';
 // Substitua pela sua chave pública do Supabase
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzQ5OTY4NCwiZXhwIjoxOTU5MDc1Njg0fQ.J1C20mhPGJqoCbhY_oEACEDd7Rdv2gvTVR98j7OBF6Y'; 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
 
 export function Loja5() {
   const fileInputRef = useRef(null);
