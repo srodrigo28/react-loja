@@ -44,7 +44,7 @@ export function Loja3() {
           marginBottom: '1rem',
         }}
       >
-        Selecionar Imagens
+        Adicionar Image
       </button>
 
       {/* Input file para múltiplas imagens */}
@@ -62,7 +62,7 @@ export function Loja3() {
         {images.map((image) => (
           <div key={image.id} style={{ textAlign: 'center' }}>
             <img src={image.url} alt={image.name} style={{ width: '150px', height: 'auto', borderRadius: '5px' }} />
-            <p style={{ fontSize: '14px', marginTop: '0.5rem' }}>{image.name}</p>
+            <p style={{ fontSize: '14px', marginTop: '0.5rem' }}></p>
           </div>
         ))}
       </div>
