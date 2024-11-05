@@ -10,9 +10,7 @@ export function List(props){
                             <h3> {item.title} </h3>
                             <span>{ item.isCompleted ? "INICIOU" : "AGUARDANDO" } </span>
                             <div className="btn-group">
-                                <button> 
-                                    <ChevronRightIcon />
-                                </button>
+                                <button> <ChevronRightIcon /> </button>
                             </div>
                         </div>
                         <button className="btn-delete" onClick={ () => props.onDeleteTaskClick(item.id)} > 

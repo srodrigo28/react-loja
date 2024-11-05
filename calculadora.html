@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form> 
+        <h1 class="display">0</h1>
+
+        <div class="btn-group">
+            <div class="btn-row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operation">/</button>
+            </div>
+            <div class="btn-row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operation">x</button>
+            </div>
+            <div class="btn-row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operation">-</button>
+            </div>
+            <div class="btn-row">
+                <button>0</button>
+                <button>.</button>
+                <button class="operation">+</button>
+                <button class="operation">=</button>
+            </div>
+        </div>
+
+    </form>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            background-color: #1D1D1D;
+            width: 260px;
+            height: 360px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        .display{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: white;
+            height: 120px;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 50px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .btn-group{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        button{
+            margin: 4px 3px;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        button:hover{
+            color: white;
+            background-color: green;
+        }
+        .operation{
+            font-weight: 900;
+            color: #fff;
+            background-color: blueviolet;
+        }
+    </style>
+    <script>
+        
+    </script>
+</body>
+</html>
