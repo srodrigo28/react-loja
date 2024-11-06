@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.task-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+}
+.task-box{
+    width: 25vw;
+    margin: auto;
+    height: 90%;
+    color: white;
+    padding: 30px 50px;
+
+    background-color: #1d1d1d;
+}
+.task-box h1{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}

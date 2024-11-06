@@ -8,3 +8,11 @@ https://www.youtube.com/watch?v=2RWsLmu8yVc
 ```
 npm i lucide-react
 ```
+
+```
+remove uuid
+```
+
+```
+npm i react-router-dom
+```

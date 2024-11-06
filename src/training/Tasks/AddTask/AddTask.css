@@ -1,0 +1,34 @@
+.form-card{
+    width: 100%;
+    height: 270px;
+    margin: auto;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: blueviolet;
+
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.form-card h1{
+    margin-bottom: 20px;
+}
+.form-card input, button{
+    padding: 10px;
+    border: 7px;
+    outline: none;
+    border-radius: 7px;
+}
+.form-card button{
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    background-color: black;
+
+    transition: .3s;
+}
+.form-card button:hover{
+    background-color: green;
+}
